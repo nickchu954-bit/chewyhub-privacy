@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChewyHub Privacy Policy</title>
+<meta name="description" content="What the ChewyHub app stores, where, and who can see it.">
+<style>
+  :root { --bg:#ffffff; --ink:#1c1a22; --muted:#5f5a6b; --line:#e6e2ee; --accent:#6a3fc8; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#121016; --ink:#f1eef6; --muted:#a59fb3; --line:#2c2834; --accent:#b49cf0; } }
+  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:40px 16px 64px; }
+  h1 { font-size:2rem; line-height:1.2; margin:0 0 4px; }
+  h2 { font-size:1.2rem; margin:32px 0 8px; padding-top:16px; border-top:1px solid var(--line); }
+  .date { color:var(--muted); margin:0 0 24px; }
+  a { color:var(--accent); }
+  li { margin:4px 0; }
+  code { font-size:.9em; background:var(--line); padding:1px 5px; border-radius:4px; }
+</style>
+</head>
+<body>
+<main>
+<h1>ChewyHub Privacy Policy</h1>
+<p class="date">Last updated: October 26, 2026</p>
+
+<p>ChewyHub is a private app for friends and family of Nick Chu to watch and listen to the movies, TV shows
+and music on Nick's own media server ("ChewyNeuraLink"), which runs the free Jellyfin software.
+ChewyHub is independent and is not made by or affiliated with the Jellyfin project or Tailscale.</p>
+
+<h2>The short version</h2>
+<ul>
+  <li><strong>No ads, no tracking, no analytics.</strong> ChewyHub doesn't sell or share your data.</li>
+  <li>Your account details are stored on Nick's server, and only Nick can see them.</li>
+  <li>To connect you privately, ChewyHub uses <strong>Tailscale</strong>, which learns some technical details
+    about your phone (see below).</li>
+</ul>
+
+<h2>What stays on your phone</h2>
+<p>A sign-in key from the server (never your password), the private-connection settings for your phone,
+your app settings, listening statistics, recent searches and anything you download. Deleting the app
+removes all of this.</p>
+
+<h2>What's stored on Nick's server</h2>
+<ul>
+  <li><strong>Your account:</strong> username and password (the password is stored by Jellyfin in scrambled,
+    hashed form), favorites, playlists, what you've watched or listened to and where you stopped, as
+    Jellyfin always keeps.</li>
+  <li><strong>Your sign-up details:</strong> first and last name, email address and (optionally) phone number.
+    They're used only so Nick can approve your account and so you can reset your password by email.</li>
+  <li><strong>Your devices:</strong> the name each of your phones has on the private network (for example
+    <code>chewyhub-sam-1a2b3c</code>), so they can be removed when you delete your account.</li>
+  <li><strong>Sharing:</strong> when you share a playlist, other people on the server can see your username,
+    and the people you share with can see and play that playlist.</li>
+</ul>
+
+<h2>Tailscale (the private connection)</h2>
+<p>When you sign in, ChewyHub joins Nick's private Tailscale network so it can reach the server without
+putting it on the open internet. Tailscale, Inc. runs the service that introduces your phone to the
+server. To do that it receives:</p>
+<ul>
+  <li>the device name above (which includes your username), your phone's operating system and Tailscale
+    version,</li>
+  <li>your phone's IP addresses and an encryption key for the connection.</li>
+</ul>
+<p>Your movies, music and other traffic travel <strong>encrypted end to end</strong> between your phone and
+the server; Tailscale can't read them, even when it relays them. ChewyHub switches off Tailscale's
+optional diagnostic logs. Only ChewyHub's own traffic uses this connection, not the rest of your phone.
+Tailscale's privacy policy: <a href="https://tailscale.com/privacy-policy">tailscale.com/privacy-policy</a></p>
+<p>Sign-up and password reset happen before you're on the private network, so they go through Nick's
+public sign-up address (also provided by Tailscale), encrypted with HTTPS.</p>
+
+<h2>Camera and photos</h2>
+<p>ChewyHub uses your camera or photo library only if you choose a picture as a playlist cover.</p>
+
+<h2>Your choices</h2>
+<ul>
+  <li>Edit your name, email and phone in <strong>Settings → Account → Your profile</strong>.</li>
+  <li><strong>Delete your account</strong> in <strong>Settings → Account → Delete my account</strong>. This
+    deletes your Jellyfin account, your sign-up details and your phones' entries on the private network.</li>
+  <li>Signing out also takes your phone off the private network.</li>
+</ul>
+
+<h2>Children</h2>
+<p>ChewyHub isn't directed at children under 13, and accounts are only for people Nick approves.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted here with a new date.</p>
+
+<h2>Contact</h2>
+<p>Nick Chu · <a href="mailto:nickchu954@gmail.com">nickchu954@gmail.com</a></p>
+</main>
+</body>
+</html>
